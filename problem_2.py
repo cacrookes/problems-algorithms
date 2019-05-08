@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 def find_rotated_array_pivot(input_list):
     """
     Find the index of the pivot in a rotated sorted array.
@@ -111,6 +114,6 @@ def tests():
 if __name__ == '__main__':
     # uncomment the line below to run the original
     # test cases supplied by Udacity.
-    original_test_cases()
+    # original_test_cases()
 
     tests()
