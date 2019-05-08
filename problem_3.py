@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def rearrange_digits(input_list):
     """
     Rearrange Array Elements so as to form two number such that their sum is maximum.
@@ -13,8 +15,8 @@ def rearrange_digits(input_list):
     y = 0
     last_add = 'y'
     for i in range(10):
-        for j in range(len(input_list)):
-            if input_list[j] == i:
+        for num in input_list:
+            if num == i:
                 if last_add == 'y':
                     x += i * level
                     last_add = 'x'
