@@ -1,6 +1,6 @@
 # Finding the Square Root of an Integer
 
-The script `problem.py` includes the function `sqrt(number)` which takes in a positive integer value, including 0, and returns the floored integer square root of that number.
+The script `problem_1.py` includes the function `sqrt(number)` which takes in a positive integer value, including 0, and returns the floored integer square root of that number.
 
 ## Requirements
 
