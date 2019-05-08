@@ -23,6 +23,7 @@ def find_rotated_array_pivot(input_list):
             pivot = (lower + upper) // 2
     return pivot
 
+
 def rotated_array_search(input_list, number):
     """
     Find the index by searching in a rotated sorted array
@@ -46,23 +47,24 @@ def rotated_array_search(input_list, number):
     index = (upper + lower) // 2
     while lower < index:
         if input_list[index] == number:
-            
             return index
         if number < input_list[index]:
             upper = index
         else:
             lower = index
         index = (upper + lower) // 2
-    
+
     if input_list[index] == number:
         return index
-    return -1    
+    return -1
+
 
 def linear_search(input_list, number):
     for index, element in enumerate(input_list):
         if element == number:
             return index
     return -1
+
 
 def test_function(test_case):
     input_list = test_case[0]
@@ -71,6 +73,7 @@ def test_function(test_case):
         print("Pass")
     else:
         print("Fail")
+
 
 test_function([[1, 2, 3, 4], 2])
 test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
