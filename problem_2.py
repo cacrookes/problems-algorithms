@@ -75,9 +75,42 @@ def test_function(test_case):
         print("Fail")
 
 
-test_function([[1, 2, 3, 4], 2])
-test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
-test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
-test_function([[6, 7, 8, 1, 2, 3, 4], 8])
-test_function([[6, 7, 8, 1, 2, 3, 4], 1])
-test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+def original_test_cases():
+    """The original tests provided by Udacity"""
+    test_function([[1, 2, 3, 4], 2])
+    test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
+    test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
+    test_function([[6, 7, 8, 1, 2, 3, 4], 8])
+    test_function([[6, 7, 8, 1, 2, 3, 4], 1])
+    test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+
+
+def tests():
+    """Test output"""
+    print(rotated_array_search([1, 2, 3, 4], 2))
+    # Expected Output: 1
+    # Test the alogrithm works in a sorted arrary that is not rotated
+
+    print(rotated_array_search([6, 7, 8, 9, 10, 1, 2, 3, 4], 6))
+    # Expected Output: 0
+    # Test the algorithm can find a number in the first index
+
+    print(rotated_array_search([6, 7, 8, 9, 10, 1, 2, 3, 4], 1))
+    # Expected Ouput: 5
+    # Test the algorithm can find a number immediately after the pivot
+
+    print(rotated_array_search([6, 7, 8, 1, 2, 3, 4], 8))
+    # Expected Output: 2
+    # Test the algorithm can find the number when the number is the pivot
+
+    print(rotated_array_search([6, 7, 8, 1, 2, 3, 4], 10))
+    # Expected Ouput: -1
+    # Test the algorithm returns -1 when the number is not in the array
+
+
+if __name__ == '__main__':
+    # uncomment the line below to run the original
+    # test cases supplied by Udacity.
+    original_test_cases()
+
+    tests()
