@@ -17,7 +17,6 @@ def sqrt(number):
     root = ceiling
     while floor < root:
         if root * root == number:
-            print(f'Number: {number} Root: {root}')
             return root
         if root * root > number:
             ceiling = root
@@ -26,7 +25,6 @@ def sqrt(number):
             floor = root
             root = (ceiling + floor)//2
 
-    print(f'Number: {number} Root: {root}')
     return root
 
 
