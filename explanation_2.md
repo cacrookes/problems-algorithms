@@ -6,7 +6,7 @@ found, `-1` is returned.
 
 ## Requirements
 
-Python 2.7 or greater is needed to run this script.
+Python 2.7 or Python 3.x is needed to run this script.
 
 ## Program Design
 
