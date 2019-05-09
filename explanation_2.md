@@ -13,7 +13,7 @@ Python 2.7 or Python 3.x is needed to run this script.
 - Runtime complexity: `O(log(n))`
 - Space efficiency: `O(n)`
 
-The `rotated_array_search(input_list, number)` function finds the indes of the number 
+The `rotated_array_search(input_list, number)` function finds the index of the number 
 in the array in `O(log(n))` time by using two binary searchs.
 
 First a binary search is used to find the pivot in the rotated array. Once the pivot
