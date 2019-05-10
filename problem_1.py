@@ -38,25 +38,25 @@ def original_test_cases():
 
 
 def main():
-    print(f'Square root of 9 is: {sqrt(9)}')
+    print('Square root of 9 is: ' + str(sqrt(9)))
     # Expected output: Square root of 9 is: 3
     # This tests a standard case.
 
-    print(f'Square root of 0 is: {sqrt(0)}')
+    print('Square root of 0 is: ' + str(sqrt(0)))
     # Expected output: Square root of 0 is: 0
     # This tests the edge case where the input is 0.
 
-    print(f'Square root of 1 is: {sqrt(1)}')
+    print('Square root of 1 is: ' + str(sqrt(1)))
     # Expected output: Square root of 1 is: 1
     # This tests the edge case where the square root is
     # equal to the input number
 
-    print(f'Square root of 27 is: {sqrt(5)}')
+    print('Square root of 27 is: ' + str(sqrt(5)))
     # Expected output: Square root of 27 is: 2
     # This tests that the floor of a square root is
     # returned if the square root is not an integer.
 
-    print(f'Square root of 98596 is: {sqrt(98596)}')
+    print('Square root of 98596 is: ' + str(sqrt(98596)))
     # Expected output: Square root of 98596 is: 314
     # This tests large numbers.
 
