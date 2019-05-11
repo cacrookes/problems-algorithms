@@ -1,6 +1,10 @@
 # HTTPRouter using a Trie
 
-
+The script `problem_7.py` implements an HTTPRouter using a Trie. It allows the user
+to add a route along with a handler for that route. The user can also look up
+a route's handler. If a route is not found,  *"not found handler"* will be returned.
+The router handles paths with and with out a trailing `/`. i.e. `/home` and `/home/`
+are both treated the same way.
 
 
 ## Data structure
