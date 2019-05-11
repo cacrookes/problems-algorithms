@@ -48,7 +48,7 @@ class Router:
         return self.not_found_handler
 
     def split_path(self, path):
-        # we could use path.split('/'), but we are trying not to
+        # path.split('/') could be used, but I am trying not to
         # rely on Python's built in functions where reasonable
         part_list = []
         part = ''
