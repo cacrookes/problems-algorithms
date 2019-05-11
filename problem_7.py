@@ -54,14 +54,18 @@ class Router:
 def run_tests():
     # create the router and add a route
     router = Router("root handler", "not found handler")
-    router.add_handler("/home/about", "about handler")  # add a route
+    router.add_handler("/home/about/me", "about me handler") # add a route
+    router.add_handler("/home/about", "about handler")  # add a handler in an existing path
+    router.add_handler("/home/blog", "blog handler")  # test we can add different routes
 
     # some lookups with the expected output
     print(router.lookup("/"))  # should print 'root handler'
     print(router.lookup("/home"))  # should print 'not found handler'
     print(router.lookup("/home/about"))  # should print 'about handler'
     print(router.lookup("/home/about/"))  # should print 'about handler'
-    print(router.lookup("/home/about/me"))  # should print 'not found handler'
+    print(router.lookup("/home/about/me"))  # should print 'about me handler'
+    print(router.lookup("/home/about/me/2019"))  # should print 'not found handler'
+    print(router.lookup("/home/blog/"))  # should print 'blog handler'
 
 
 if __name__ == '__main__':
