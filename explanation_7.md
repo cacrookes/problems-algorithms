@@ -105,7 +105,7 @@ m = number of nodes in the trie.
 
 
 #### Router split_path(path)
-#TODO update this
+
 Let `n` be the number of characters in `path`
 
 This function iterates through each character in `path` one time. This will take
