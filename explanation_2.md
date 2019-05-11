@@ -17,8 +17,8 @@ The `rotated_array_search(input_list, number)` function finds the index of the n
 in the array in `O(log(n))` time by using two binary searchs.
 
 First a binary search is used to find the pivot in the rotated array. Once the pivot
-is known, we can establish a lower and upper bound on the possible indexes the number
-may be found in. The algorithm proceeds to do a binary search within the slice of the 
+is known, the lower and upper bounds on the possible indexes the number
+may be found in can be established. The algorithm proceeds to do a binary search within the slice of the 
 array determined by these lower and upper bounds. 
 
 By doing a constant number of binary searches, the algorithm completes in a fast `O(log(n))`
