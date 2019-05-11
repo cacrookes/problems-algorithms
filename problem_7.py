@@ -48,13 +48,28 @@ class Router:
         return self.not_found_handler
 
     def split_path(self, path):
-        return [part for part in path.split('/') if part != '']
+        # we could use path.split('/'), but we are trying not to
+        # rely on Python's built in functions where reasonable
+        part_list = []
+        part = ''
+        path_length = len(path)
+        for i, char in enumerate(path[1:], 1):
+            if char == '/':
+                part_list.append(part)
+                part = ''
+            elif i == path_length - 1:
+                part += char
+                part_list.append(part)
+            else:
+                part += char
+
+        return part_list
 
 
 def run_tests():
     # create the router and add a route
     router = Router("root handler", "not found handler")
-    router.add_handler("/home/about/me", "about me handler") # add a route
+    router.add_handler("/home/about/me", "about me handler")  # add a route
     router.add_handler("/home/about", "about handler")  # add a handler in an existing path
     router.add_handler("/home/blog", "blog handler")  # test we can add different routes
 
